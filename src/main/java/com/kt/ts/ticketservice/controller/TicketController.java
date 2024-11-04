@@ -16,16 +16,19 @@ public class TicketController {
 
     @PostMapping("/create")
     public Ticket createTicket(@RequestBody Ticket ticket) {
+
         return ticketService.createTicket(ticket);
     }
 
     @GetMapping("/user/{userId}")
     public List<Ticket> getUserTickets(@PathVariable String userId) {
+
         return ticketService.getUserTickets(userId);
     }
 
     @GetMapping("/{id}")
     public Ticket getTicket(@PathVariable String id) {
+
         return ticketService.getTicket(id);
     }
 
